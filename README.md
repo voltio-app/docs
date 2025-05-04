@@ -1,47 +1,109 @@
-# Astro Starter Kit: Minimal
+# 📄 Legal Texts – Documentación del Proyecto
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Legal Texts es una aplicación web construida con [Astro](https://astro.build/) para mostrar y gestionar textos legales (políticas de privacidad, términos y condiciones, etc.) de forma centralizada y editable.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ ¿Qué es este proyecto?
 
-## 🚀 Project Structure
+Este proyecto permite:
 
-Inside of your Astro project, you'll see the following folders and files:
+- Visualizar textos legales en páginas web amigables.
+- Gestionar fácilmente los contenidos legales en formato Markdown.
+- Personalizar la estructura y el diseño usando Astro.
+
+---
+
+## 🚀 Guía Rápida de Inicio
+
+1. **Instalación de dependencias**
+
+   ```sh
+   npm install
+   ```
+
+2. **Desarrollo local**
+
+   ```sh
+   npm run dev
+   ```
+
+   Accede a [http://localhost:4321](http://localhost:4321) en tu navegador.
+
+3. **Construcción para producción**
+
+   ```sh
+   npm run build
+   ```
+
+4. **Vista previa de producción**
+   ```sh
+   npm run preview
+   ```
+
+---
+
+## 🗂️ Estructura del Proyecto
 
 ```text
-/
-├── public/
+legal_texts/
+├── public/                # Recursos estáticos (logos, iconos)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── content/
+│   │   └── docs/          # Textos legales en Markdown
+│   ├── layouts/           # Layouts Astro
+│   ├── pages/             # Páginas Astro (.astro)
+│   └── styles/            # Estilos globales
+├── package.json
+├── astro.config.mjs
+└── README.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Textos legales**:
+  - `src/content/docs/privacy_policy.md`
+  - `src/content/docs/terms_conditions.md`
+- **Páginas**:
+  - `/privacy-policy`
+  - `/terms-conditions`
+  - `/docs/[slug]` (para textos adicionales)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## ✍️ ¿Cómo editar o agregar textos legales?
 
-## 🧞 Commands
+1. Edita los archivos Markdown en `src/content/docs/`.
+2. Para agregar un nuevo texto legal:
+   - Crea un archivo `.md` en `src/content/docs/`.
+   - Añade la ruta correspondiente en `src/pages/docs/[slug].astro` si es necesario.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 💡 Consejos de UX
 
-## 👀 Want to learn more?
+- Navegación clara entre textos legales.
+- Diseño responsive y accesible.
+- Uso de layouts reutilizables para coherencia visual.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 📚 Recursos útiles
+
+- [Documentación Astro](https://docs.astro.build/)
+- [Astro Discord](https://astro.build/chat)
+
+---
+
+## 🛠️ Scripts disponibles
+
+| Comando           | Descripción                      |
+| ----------------- | -------------------------------- |
+| `npm install`     | Instala dependencias             |
+| `npm run dev`     | Servidor de desarrollo           |
+| `npm run build`   | Compila el sitio para producción |
+| `npm run preview` | Vista previa de la build         |
+
+---
+
+## 📬 Contacto
+
+¿Dudas o sugerencias? Abre un issue o contacta al responsable del repositorio.
