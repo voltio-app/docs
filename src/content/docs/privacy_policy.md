@@ -1,4 +1,6 @@
-# Privacy Policy for Voltio
+---
+title: Privacy Policy for Voltio
+---
 
 Effective date: May 2, 2025
 

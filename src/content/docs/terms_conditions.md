@@ -1,4 +1,6 @@
-# Terms & Conditions for Voltio
+---
+title: Terms & Conditions for Voltio
+---
 
 Effective date: May 2, 2025
 

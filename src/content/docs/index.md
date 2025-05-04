@@ -1,4 +1,6 @@
-# Voltio App – Legal Documents
+---
+title: Voltio App – Legal Documents
+---
 
 This repository hosts the legal documents for the Voltio app.
 

@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map(doc => ({
+    params: { slug: doc.slug },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await doc.render();
+---
+
+<BaseLayout title={doc.data.title}>
+  <article class="legal-document">
+    <a href="/" class="back-link">← Volver a documentos legales</a>
+    <Content />
+  </article>
+
+  <style>
+    .legal-document {
+      line-height: 1.6;
+    }
+    .legal-document :global(h1) {
+      color: #333;
+      margin: 2rem 0;
+    }
+    .legal-document :global(h2) {
+      color: #444;
+      margin: 1.5rem 0;
+    }
+    .legal-document :global(p) {
+      margin: 1rem 0;
+    }
+    .legal-document :global(ul) {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #666;
+      text-decoration: none;
+      &:hover {
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+  </style>
+</BaseLayout>
